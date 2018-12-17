@@ -4,17 +4,9 @@
     </div>
 </template>
 <script>
-  import { mapGetters } from 'vuex'
 
   export default {
-    computed: {
-      ...mapGetters(['test'])
-    },
-    mounted () {
-      this.$store.dispatch('setTest', 10).then(() => {
-        console.log(this.test)
-      })
-    }
+
   }
   document.addEventListener('DOMContentLoaded', () => {
     const html = document.querySelector('html')
@@ -23,3 +15,10 @@
     html.style.fontSize = fontSize + 'px'
   })
 </script>
+<style lang="scss" scoped>
+    #app {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+</style>
